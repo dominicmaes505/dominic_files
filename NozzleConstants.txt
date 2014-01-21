@@ -1,0 +1,54 @@
+###############################################################
+# World Parameters
+###############################################################
+
+s:Ge/World/Type="G4Box"
+s:Ge/World/Material="Vacuum"
+d:Ge/World/HLX=5. m
+d:Ge/World/HLY=5. m
+d:Ge/World/HLZ=5. m
+d:Ge/World/TransX=0. m
+d:Ge/World/TransY=0. m
+d:Ge/World/TransZ=0. m
+d:Ge/World/RotX=0. deg
+d:Ge/World/RotY=0. deg
+d:Ge/World/RotZ=0. deg
+d:Ge/World/MaxStepSize = 100. mm
+
+###############################################################
+#Beam Parameters
+###############################################################
+
+s:Ge/BeamPosition/Parent="World"
+s:Ge/BeamPosition/Type="Group"
+d:Ge/BeamPosition/TransX=0. m
+d:Ge/BeamPosition/TransY=0. m
+d:Ge/BeamPosition/TransZ=5. m
+d:Ge/BeamPosition/RotX= 180. deg
+d:Ge/BeamPosition/RotY=0. deg
+d:Ge/BeamPosition/RotZ=0. deg
+
+###############################################################
+#Particle Source
+###############################################################
+
+s:So/Default/Type = "Beam" # Beam or PhaseSpace
+s:So/Default/Component = "BeamPosition"
+s:So/Default/BeamParticle = "proton"
+d:So/Default/BeamEnergy =  200.0 MeV
+u:So/Default/BeamEnergySpread = 0.757504
+s:So/Default/BeamShape = "Ellipse" # Point, Ellipse, Rectangle or Isotropic
+d:So/Default/BeamHWX = 5. cm
+d:So/Default/BeamHWY = 5. cm
+d:So/Default/BeamAngularSpreadX = 0.0032 rad
+d:So/Default/BeamAngularSpreadY = 0.0032 rad
+s:So/Default/BeamXYDistribution = "Gaussian" # Flat or Gaussian
+d:So/Default/BeamStandardDeviationX = 0.65 cm
+d:So/Default/BeamStandardDeviationY = 0.65 cm
+i:So/Default/NumberOfHistoriesInRun = 500
+Ge/CheckForOverlaps = "true"
+
+Ts/ShowHistoryCountAtInterval = 100
+Ts/PauseForGeant4Commands = "BeforeQuit"
+
+

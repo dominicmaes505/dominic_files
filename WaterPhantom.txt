@@ -1,0 +1,29 @@
+includeFile = NozzleConstants.txt
+
+# Create Water Volume
+s:Ge/WaterPhantom/Type = "TsBox"
+s:Ge/WaterPhantom/Material = "Water"
+s:Ge/WaterPhantom/Parent = "World"
+d:Ge/WaterPhantom/HLX= 0.25 m
+d:Ge/WaterPhantom/HLY= 0.25 m
+d:Ge/WaterPhantom/HLZ= 0.25 m
+d:Ge/WaterPhantom/TransX= 0. m
+d:Ge/WaterPhantom/TransY= 0. m
+d:Ge/WaterPhantom/TransZ= 0. m
+d:Ge/WaterPhantom/RotX= 180. deg
+d:Ge/WaterPhantom/RotY= 0. deg
+d:Ge/WaterPhantom/RotZ= 0. deg
+
+# Scorer
+b:Sc/MyScorer/Active = "True" # Toggles between scorer on or off
+b:Sc/MyScorer/OutputToConsole = "False"
+b:Sc/MyScorer/Invisible = "True"
+s:Sc/MyScorer/Quantity = "DoseToWater"
+s:Sc/MyScorer/Component = "WaterPhantom"
+s:Sc/MyScorer/Material = "Water"
+s:Sc/MyScorer/IfOutputFileAlreadyExists = "Overwrite" 
+s:Sc/MyScorer/OutputType = "csv"
+i:Sc/MyScorer/XBins = 100
+i:Sc/MyScorer/YBins = 100
+i:Sc/MyScorer/ZBins = 100
+s:Sc/MyScorer/OutputFile = "scored_dose"

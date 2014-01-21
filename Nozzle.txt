@@ -1,0 +1,117 @@
+includeFile = WaterPhantom.txt
+
+###############################################################
+# IC1
+###############################################################
+# 25 micrometer kapton
+s:Ge/kapton/Type = "TsBox"
+s:Ge/kapton/Material = "Kapton"
+s:Ge/kapton/Parent = "World"
+s:Ge/kapton/Color = "red" 
+d:Ge/kapton/HLX= 0.25 m
+d:Ge/kapton/HLY= 0.25 m
+d:Ge/kapton/HLZ= 0.00125 m
+#d:Ge/kapton/HLZ= 0.0025 m
+d:Ge/kapton/TransX= 0. m
+d:Ge/kapton/TransY= 0. m
+d:Ge/kapton/TransZ= 4.5 m
+d:Ge/kapton/RotX= 0. deg
+d:Ge/kapton/RotY= 0. deg
+d:Ge/kapton/RotZ= 0. deg
+
+#Air gaps
+s:Ge/air/Type = "TsBox"
+s:Ge/air/Material = "Air"
+s:Ge/air/Parent = "World"
+d:Ge/air/HLX= 0.25 m
+d:Ge/air/HLY= 0.25 m
+d:Ge/air/HLZ= 0.009 m   
+#d:Ge/air/HLZ= 0.018 m
+d:Ge/air/TransX= 0. m
+d:Ge/air/TransY= 0. m
+d:Ge/air/TransZ= Ge/kapton/Transz - Ge/kapton/HLZ m
+d:Ge/air/RotX= 0. deg
+d:Ge/air/RotY= 0. deg
+d:Ge/air/RotZ= 0. deg
+
+#Mylar
+s:Ge/mylar2/Type = "TsBox"
+s:Ge/mylar2/Material = "Mylar"
+s:Ge/mylar2/Parent = "World"
+d:Ge/mylar2/HLX= 0.25 m
+d:Ge/mylar2/HLY= 0.25 m
+d:Ge/mylar2/HLZ= 0.000012 m
+#d:Ge/mylar2/HLZ= 0.000024 m
+d:Ge/mylar2/TransX= 0. m
+d:Ge/mylar2/TransY= 0. m
+d:Ge/mylar2/TransZ= Ge/air/Transz - Ge/air/HLZ m
+d:Ge/mylar2/RotX= 0. deg
+d:Ge/mylar2/RotY= 0. deg
+d:Ge/mylar2/RotZ= 0. deg
+
+#Aluminum
+s:Ge/Al2/Type = "TsBox"
+s:Ge/Al2/Material = "Aluminum"
+s:Ge/Al2/Parent = "World"
+d:Ge/Al2/HLX= 0.25 m
+d:Ge/Al2/HLY= 0.25 m
+d:Ge/Al2/HLZ= 0.000000026 m
+#d:Ge/Al2/HLZ= 0.000000052 m
+d:Ge/Al2/TransX= 0. m
+d:Ge/Al2/TransY= 0. m
+d:Ge/Al2/TransZ= Ge/mylar2/Transz - Ge/mylar2/HLZ m
+d:Ge/Al2/RotX= 0. deg
+d:Ge/Al2/RotY= 0. deg
+d:Ge/Al2/RotZ= 0. deg
+
+###############################################################
+# IC23
+###############################################################
+#Mylar
+s:Ge/mylar/Type = "TsBox"
+s:Ge/mylar/Material = "Mylar"
+s:Ge/mylar/Parent = "World"
+s:Ge/mylar/Color = "red" 
+d:Ge/mylar/HLX= 0.25 m
+d:Ge/mylar/HLY= 0.25 m
+d:Ge/mylar/HLZ= 0.000012 m
+#d:Ge/mylar/HLZ= 0.000024 m
+d:Ge/mylar/TransX= 0. m
+d:Ge/mylar/TransY= 0. m
+d:Ge/mylar/TransZ= Ge/Al2/Transz - 0.5 m 
+d:Ge/mylar/RotX= 0. deg
+d:Ge/mylar/RotY= 0. deg
+d:Ge/mylar/RotZ= 0. deg
+
+#Aluminum
+s:Ge/Al/Type = "TsBox"
+s:Ge/Al/Material = "Aluminum"
+s:Ge/Al/Parent = "World"
+s:Ge/Al/Color = "blue"
+d:Ge/Al/HLX= 0.25 m
+d:Ge/Al/HLY= 0.25 m
+d:Ge/Al/HLZ= 0.000008 m
+#d:Ge/Al/HLZ= 0.0000016 m
+d:Ge/Al/TransX= 0. m
+d:Ge/Al/TransY= 0. m
+d:Ge/Al/TransZ= Ge/mylar/Transz - Ge/mylar/HLZ m
+d:Ge/Al/RotX= 0. deg
+d:Ge/Al/RotY= 0. deg
+d:Ge/Al/RotZ= 0. deg
+
+###############################################################
+#GUI Settings
+###############################################################
+
+b:Gr/View1/Active = "False" 
+#s:Gr/View1/Type = "OpenGL"
+i:Gr/View1/WindowSizeX = 1024
+i:Gr/View1/WindowSizeY = 768
+d:Gr/View1/Theta = 90 deg # default: 45
+d:Gr/View1/Phi = 0 deg #default: 20
+u:Gr/View1/Zoom = 2
+b:Gr/View1/HiddenLineRemovalForTrajectories = "True"
+s:Gr/View1/Projection = "Perspective"
+d:Gr/View1/PerspectiveAngle = 0 deg #default: 30 deg
+b:Gr/View1/CopyOpenGLToEPS = "False"
+
