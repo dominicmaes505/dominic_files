@@ -1,0 +1,19 @@
+sudo apt-get install git
+
+git config --global user.name "dominicmaes505"
+git config --global user.email "dominicmaes505@gmail.com"
+
+git init
+git remote add origin https://github.com/dominicmaes505/dominic_files.git
+
+git add 'File'
+git add .
+
+git commit -m 'Comment'
+git push origin master
+
+git reset --soft HEAD^
+git reset --hard HEAD^
+
+git clone https://github.com/dominicmaes505/dominic_files
+git pull origin master
