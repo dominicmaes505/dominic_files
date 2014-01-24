@@ -46,7 +46,6 @@ s:So/Default/BeamXYDistribution = "Gaussian" # Flat or Gaussian
 d:So/Default/BeamStandardDeviationX = 0.65 cm
 d:So/Default/BeamStandardDeviationY = 0.65 cm
 i:So/Default/NumberOfHistoriesInRun = 1000
-Ge/CheckForOverlaps = "true"
 
 Ts/ShowHistoryCountAtInterval = 100
 Ts/PauseForGeant4Commands = "BeforeQuit"
